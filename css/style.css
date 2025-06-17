@@ -1258,27 +1258,33 @@ textarea::-webkit-outer-spin-button {
 /* 러닝메이트 좌측에서 우측으로 이동 */
 @keyframes moveLeftToRight {
   0% {
-    left: -60px;
+    left: -150px;
   }
   100% {
     left: 100%;
   }
 }
 
+.sc-mate .gauge {
+  position: absolute;
+  bottom: 55px;
+  left: 0;
+  width: 100%;
+  overflow: visible;
+}
+
 /* 기본 상태 (1024px 이상) */
 .sc-mate .gauge .run.student {
   position: absolute;
-  bottom: 20px;
-  left: 0;
+  bottom: 0;
   width: 150px;
-  animation: moveLeftToRight 5s linear infinite;
+  animation: moveLeftToRight 6s linear infinite;
 }
 
 /* 1023px 이하일 때 */
 @media (max-width: 1023px) {
   .sc-mate .gauge .run.student {
-    left: 50%;
-    animation: moveLeftToRight 5s linear infinite;
+    width: 120px;
   }
 }
 
@@ -1286,10 +1292,9 @@ textarea::-webkit-outer-spin-button {
 @media (max-width: 767px) {
   .sc-mate .gauge .run.student {
     width: 100px;
-    left: 40%;
-    animation: moveLeftToRight 5s linear infinite;
   }
 }
+
 .scroll-btn {
   position: absolute;
   left: 50%;
