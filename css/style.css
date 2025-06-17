@@ -118,10 +118,12 @@ body {
 
 *::-moz-selection {
   background: #70ff0a;
+  color: #fff;
 }
 
 *::selection {
   background: #70ff0a;
+  color: #fff;
 }
 
 a {
@@ -1256,7 +1258,7 @@ textarea::-webkit-outer-spin-button {
 /* 러닝메이트 좌측에서 우측으로 이동 */
 @keyframes moveLeftToRight {
   0% {
-    left: 0;
+    left: -60px;
   }
   100% {
     left: 100%;
@@ -1287,4 +1289,41 @@ textarea::-webkit-outer-spin-button {
     left: 40%;
     animation: moveLeftToRight 5s linear infinite;
   }
+}
+.scroll-btn {
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
+  display: inline-block;
+  font-size: 24px;
+  color: #70ff0a;
+  text-decoration: none;
+  animation: bounce 2s infinite;
+  z-index: 5;
+}
+
+#toTopBtn {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  z-index: 9999;
+  display: none;
+}
+
+#toTopBtn button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #70ff0a;
+  color: #000;
+  font-weight: bold;
+  font-size: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+#toTopBtn button:hover {
+  background: #fff;
+  color: #70ff0a;
 }
